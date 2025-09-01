@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html data-theme="business" lang="pl" class="font-orbitron">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Title -->
+    <title>Słowa i Algorytmy</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+  </head>
+
+  <body class="text-base-content min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <header class="bg-black text-white w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Лого -->
+        <a href="./index.html" class="flex items-center gap-3">
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full bg-white object-cover" />
+          <span class="text-lg font-bold">Słowa i Algorytmy</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex space-x-8 text-sm">
+          <a href="./index.html#o-nas" class="hover:text-blue-400 transition"
+            >O nas</a
+          >
+          <a href="./index.html#blog" class="hover:text-blue-400 transition"
+            >Blog</a
+          >
+          <a href="./index.html#zalety" class="hover:text-blue-400 transition"
+            >Zalety</a
+          >
+          <a href="./index.html#misja" class="hover:text-blue-400 transition"
+            >Misja</a
+          >
+        </nav>
+
+        <!-- CTA Button -->
+        <a
+          href="./index.html#kontakt"
+          class="hidden md:inline-block px-5 py-2 rounded-full border border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-sm font-medium hover:scale-105 transition">
+          Skontaktuj się
+        </a>
+
+        <!-- Hamburger Button -->
+        <button
+          id="menu-toggle"
+          class="text-white focus:outline-none text-3xl md:hidden">
+          <svg
+            id="menu-open-icon"
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            id="menu-close-icon"
+            class="h-8 w-8 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-6 text-xl font-semibold text-white z-40 hidden">
+        <button
+          onclick="toggleMenu()"
+          class="absolute top-4 right-4 text-white text-4xl focus:outline-none">
+          &times;
+        </button>
+        <a href="./index.html#o-nas" onclick="toggleMenu()">O nas</a>
+        <a href="./index.html#blog" onclick="toggleMenu()">Blog</a>
+        <a href="./index.html#zalety" onclick="toggleMenu()">Zalety</a>
+        <a href="./index.html#misja" onclick="toggleMenu()">Misja</a>
+        <a
+          href="./index.html#kontakt"
+          onclick="toggleMenu()"
+          class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:scale-105 transition"
+          >Skontaktuj się</a
+        >
+      </div>
+    </header>
+
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menuOpenIcon = document.getElementById("menu-open-icon");
+      const menuCloseIcon = document.getElementById("menu-close-icon");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden");
+        menuCloseIcon.classList.toggle("hidden");
+      }
+
+      toggleBtn.addEventListener("click", toggleMenu);
+    </script>
+
+    <main
+      id="site-main"
+      class="relative min-h-screen text-base-content overflow-hidden">
+      <section class="w-full py-12 bg-[#0a0a0a]">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+          <!-- Title -->
+          <h1
+            class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Regulamin korzystania
+          </h1>
+
+          <!-- Lead -->
+          <p class="mt-4 text-base sm:text-lg text-white/70">
+            Dokument określa zasady korzystania z serwisu i materiałów Słowa i
+            Algorytmy. Prosimy o zapoznanie się przed rozpoczęciem korzystania z
+            usług i treści.
+          </p>
+
+          <!-- Card wrapper -->
+          <div
+            class="mt-8 rounded-2xl ring-1 ring-white/20 bg-white/5 p-6 sm:p-8 text-white space-y-8 text-left">
+            <!-- 1 -->
+            <div>
+              <h2 class="text-2xl font-semibold">1. Akceptacja Regulaminu</h2>
+              <p class="mt-2 text-white/80">
+                Uzyskując dostęp do serwisu lub z niego korzystając,
+                potwierdzasz, że zapoznałeś/aś się z Regulaminem i akceptujesz
+                jego treść. Jeżeli nie zgadzasz się z postanowieniami, nie
+                korzystaj z serwisu.
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div>
+              <h2 class="text-2xl font-semibold">2. Opis serwisu</h2>
+              <p class="mt-2 text-white/80">
+                Słowa i Algorytmy udostępnia treści edukacyjne, materiały do
+                pobrania oraz narzędzia wspomagające naukę zastosowań AI. Serwis
+                nie jest produktem finansowym i nie składa obietnic dotyczących
+                wyników biznesowych.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div>
+              <h2 class="text-2xl font-semibold">3. Konta i dostęp</h2>
+              <ul class="mt-2 list-disc list-inside text-white/80 space-y-1">
+                <li>
+                  Odpowiadasz za prawdziwość danych oraz ochronę danych
+                  logowania.
+                </li>
+                <li>
+                  W przypadku planów zespołowych odpowiadasz za przestrzeganie
+                  Regulaminu przez członków zespołu.
+                </li>
+                <li>
+                  Możemy wstrzymać dostęp przy naruszeniu zasad lub zagrożeniu
+                  bezpieczeństwa.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 4 -->
+            <div>
+              <h2 class="text-2xl font-semibold">4. Dozwolone korzystanie</h2>
+              <p class="mt-2 text-white/80">
+                Zakazane jest używanie serwisu do działań bezprawnych, w tym
+                phishingu, naruszania praw osób trzecich, dystrybucji złośliwego
+                oprogramowania, obchodzenia mechanizmów bezpieczeństwa oraz prób
+                nieuprawnionego dostępu.
+              </p>
+            </div>
+
+            <!-- 5 -->
+            <div>
+              <h2 class="text-2xl font-semibold">5. Treści użytkownika</h2>
+              <ul class="mt-2 list-disc list-inside text-white/80 space-y-1">
+                <li>Zachowujesz prawa do przesyłanych treści.</li>
+                <li>
+                  Udzielasz niewyłącznej licencji na ich użycie w celu
+                  świadczenia usług.
+                </li>
+                <li>
+                  Oświadczasz, że posiadasz prawa do takich treści i nie
+                  naruszają one prawa.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 6 -->
+            <div>
+              <h2 class="text-2xl font-semibold">6. Własność intelektualna</h2>
+              <p class="mt-2 text-white/80">
+                Oprogramowanie, projekt, znaki towarowe i treści serwisu
+                stanowią własność Słowa i Algorytmy lub licencjodawców. Użycie
+                wykraczające poza dozwolony użytek wymaga pisemnej zgody.
+              </p>
+            </div>
+
+            <!-- 7 -->
+            <div>
+              <h2 class="text-2xl font-semibold">7. Dostęp płatny i testowy</h2>
+              <ul class="mt-2 list-disc list-inside text-white/80 space-y-1">
+                <li>
+                  Warunki dostępu testowego i płatnego określone są na stronie
+                  ofert i mogą ulegać zmianie.
+                </li>
+                <li>
+                  Rozliczenia prowadzone są zgodnie z informacjami
+                  przedstawionymi przy zakupie.
+                </li>
+                <li>
+                  Korzystanie z serwisu nie gwarantuje konkretnych wyników.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 8 -->
+            <div>
+              <h2 class="text-2xl font-semibold">8. Usługi stron trzecich</h2>
+              <p class="mt-2 text-white/80">
+                Serwis może zawierać odnośniki do usług zewnętrznych. Nie
+                ponosimy odpowiedzialności za ich treść ani polityki
+                prywatności. Korzystasz z nich na własną odpowiedzialność.
+              </p>
+            </div>
+
+            <!-- 9 -->
+            <div>
+              <h2 class="text-2xl font-semibold">9. Dostępność i zmiany</h2>
+              <p class="mt-2 text-white/80">
+                Starannie dbamy o ciągłość działania, jednak nie gwarantujemy
+                braku przerw. Możemy wprowadzać zmiany, zawieszać lub zakończyć
+                świadczenie wybranych funkcji, jeżeli jest to uzasadnione
+                bezpieczeństwem, prawem lub rozwojem produktu.
+              </p>
+            </div>
+
+            <!-- 10 -->
+            <div>
+              <h2 class="text-2xl font-semibold">
+                10. Wyłączenie odpowiedzialności
+              </h2>
+              <p class="mt-2 text-white/80">
+                Serwis i treści udostępniane są w modelu „tak jak jest”. Nie
+                udzielamy gwarancji przydatności do określonego celu,
+                nieprzerwanego działania czy zgodności z oczekiwaniami.
+              </p>
+            </div>
+
+            <!-- 11 -->
+            <div>
+              <h2 class="text-2xl font-semibold">
+                11. Ograniczenie odpowiedzialności
+              </h2>
+              <p class="mt-2 text-white/80">
+                W zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności
+                za szkody pośrednie, uboczne, utratę danych czy reputacji,
+                wynikłe z korzystania bądź braku możliwości korzystania z
+                serwisu.
+              </p>
+            </div>
+
+            <!-- 12 -->
+            <div>
+              <h2 class="text-2xl font-semibold">12. Odszkodowanie</h2>
+              <p class="mt-2 text-white/80">
+                Zobowiązujesz się zwolnić nas z odpowiedzialności za uzasadnione
+                koszty i roszczenia osób trzecich wynikłe z naruszenia
+                Regulaminu lub praw osób trzecich podczas korzystania z serwisu.
+              </p>
+            </div>
+
+            <!-- 13 -->
+            <div>
+              <h2 class="text-2xl font-semibold">13. Prawo właściwe i spory</h2>
+              <p class="mt-2 text-white/80">
+                Regulamin podlega prawu polskiemu. Spory rozstrzygają sądy
+                powszechne właściwe miejscowo dla siedziby Słowa i Algorytmy, o
+                ile przepisy nie stanowią inaczej.
+              </p>
+            </div>
+
+            <!-- 14 -->
+            <div>
+              <h2 class="text-2xl font-semibold">14. Zmiany Regulaminu</h2>
+              <p class="mt-2 text-white/80">
+                Regulamin może być aktualizowany. Aktualna wersja jest
+                publikowana na tej stronie, a korzystanie z serwisu po
+                wprowadzeniu zmian oznacza ich akceptację.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cookies Popup -->
+      <div
+        id="cookie-popup"
+        role="dialog"
+        aria-live="polite"
+        aria-label="Komunikat o plikach cookie"
+        class="fixed bottom-4 left-4 right-4 md:right-6 md:left-auto z-50 max-w-md bg-[#0f0f10]/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl ring-1 ring-white/10">
+        <!-- Header -->
+        <div class="flex items-start gap-3">
+          <!-- Icon -->
+          <div
+            class="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-xl p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <div
+              class="h-full w-full rounded-[10px] bg-[#0f0f10] grid place-items-center">
+              <svg
+                class="h-5 w-5 text-white/90"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true">
+                <path
+                  d="M12 2a5 5 0 005 5 5 5 0 005 5 8 8 0 11-8-10z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h3 class="text-base font-semibold text-white">Pliki cookie</h3>
+            <p class="mt-1 text-sm text-white/80">
+              Używamy plików cookie, aby poprawić komfort korzystania z serwisu.
+              Kontynuując, akceptujesz ich wykorzystanie. Więcej w
+              <a
+                href="#polityka"
+                class="underline decoration-white/30 hover:decoration-white"
+                >Polityce prywatności</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="mt-4 flex flex-wrap gap-2">
+          <!-- Accept (gradient border, fill on hover) -->
+          <button
+            id="accept-cookies"
+            class="group inline-flex items-center justify-center rounded-full p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <span
+              class="px-5 py-2.5 text-sm rounded-full text-white/90 bg-[#0f0f10] transition group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 group-hover:text-white group-hover:scale-[1.02]">
+              Akceptuję
+            </span>
+          </button>
+
+          <!-- Decline (neutral) -->
+          <button
+            id="decline-cookies"
+            class="inline-flex items-center justify-center px-5 py-2.5 text-sm rounded-full ring-1 ring-white/15 text-white/80 hover:ring-white/30 hover:text-white transition">
+            Odrzuć
+          </button>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const popup = document.getElementById("cookie-popup");
+          const acceptBtn = document.getElementById("accept-cookies");
+          const declineBtn = document.getElementById("decline-cookies");
+
+          if (
+            localStorage.getItem("cookiesAccepted") === "true" ||
+            localStorage.getItem("cookiesDeclined") === "true"
+          ) {
+            popup.style.display = "none";
+          }
+
+          acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesAccepted", "true");
+            popup.style.display = "none";
+          });
+
+          declineBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesDeclined", "true");
+            popup.style.display = "none";
+          });
+        });
+      </script>
+    </main>
+    <footer class="bg-[#0a0a0a] text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Лого -->
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="Logo" class="h-8" />
+          <span class="font-bold text-lg">Słowa i Algorytmy</span>
+        </div>
+
+        <!-- Навігація -->
+        <nav class="flex gap-6 text-sm text-gray-400 flex-wrap justify-center">
+          <a href="./index.html#o-nas" class="hover:text-white transition"
+            >O nas</a
+          >
+          <a href="./index.html#blog" class="hover:text-white transition"
+            >Blog</a
+          >
+          <a href="./index.html#kontakt" class="hover:text-white transition"
+            >Kontakt</a
+          >
+          <a href="./terms.html" class="hover:text-white transition"
+            >Warunki korzystania</a
+          >
+          <a href="./privacy.html" class="hover:text-white transition"
+            >Polityka prywatności</a
+          >
+        </nav>
+      </div>
+
+      <!-- Права -->
+      <div
+        class="mt-6 border-t border-gray-800 pt-4 text-center text-sm text-gray-500">
+        &copy; 2025 Słowa i Algorytmy – Wszystkie prawa zastrzeżone.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const HEADER_OFFSET = 0;
+
+        document.addEventListener("click", function (e) {
+          const trigger = e.target.closest("[data-scroll-to]");
+          if (!trigger) return;
+          e.preventDefault();
+
+          const id = trigger.dataset.scrollTo;
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          const y =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            HEADER_OFFSET;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
+</html>

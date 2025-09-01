@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html data-theme="business" lang="pl" class="font-orbitron">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Title -->
+    <title>Słowa i Algorytmy</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+  </head>
+
+  <body class="text-base-content min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <header class="bg-black text-white w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Лого -->
+        <a href="./index.html" class="flex items-center gap-3">
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full bg-white object-cover" />
+          <span class="text-lg font-bold">Słowa i Algorytmy</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex space-x-8 text-sm">
+          <a href="./index.html#o-nas" class="hover:text-blue-400 transition"
+            >O nas</a
+          >
+          <a href="./index.html#blog" class="hover:text-blue-400 transition"
+            >Blog</a
+          >
+          <a href="./index.html#zalety" class="hover:text-blue-400 transition"
+            >Zalety</a
+          >
+          <a href="./index.html#misja" class="hover:text-blue-400 transition"
+            >Misja</a
+          >
+        </nav>
+
+        <!-- CTA Button -->
+        <a
+          href="./index.html#kontakt"
+          class="hidden md:inline-block px-5 py-2 rounded-full border border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-sm font-medium hover:scale-105 transition">
+          Skontaktuj się
+        </a>
+
+        <!-- Hamburger Button -->
+        <button
+          id="menu-toggle"
+          class="text-white focus:outline-none text-3xl md:hidden">
+          <svg
+            id="menu-open-icon"
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            id="menu-close-icon"
+            class="h-8 w-8 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-6 text-xl font-semibold text-white z-40 hidden">
+        <button
+          onclick="toggleMenu()"
+          class="absolute top-4 right-4 text-white text-4xl focus:outline-none">
+          &times;
+        </button>
+        <a href="./index.html#o-nas" onclick="toggleMenu()">O nas</a>
+        <a href="./index.html#blog" onclick="toggleMenu()">Blog</a>
+        <a href="./index.html#zalety" onclick="toggleMenu()">Zalety</a>
+        <a href="./index.html#misja" onclick="toggleMenu()">Misja</a>
+        <a
+          href="./index.html#kontakt"
+          onclick="toggleMenu()"
+          class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:scale-105 transition"
+          >Skontaktuj się</a
+        >
+      </div>
+    </header>
+
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menuOpenIcon = document.getElementById("menu-open-icon");
+      const menuCloseIcon = document.getElementById("menu-close-icon");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden");
+        menuCloseIcon.classList.toggle("hidden");
+      }
+
+      toggleBtn.addEventListener("click", toggleMenu);
+    </script>
+
+    <main
+      id="site-main"
+      class="relative min-h-screen text-base-content overflow-hidden">
+      <section class="w-full py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <!-- Title -->
+          <h1
+            class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Polityka prywatności
+          </h1>
+
+          <!-- Lead -->
+          <p class="mt-4 text-base sm:text-lg text-white">
+            Wyjaśniamy, jakie dane przetwarzamy, w jakich celach i na jakiej
+            podstawie prawnej, jak długo je przechowujemy oraz jak możesz
+            skorzystać ze swoich praw wynikających z RODO.
+          </p>
+
+          <!-- Card wrapper -->
+          <div
+            class="mt-8 rounded-2xl ring-1 ring-white/70 bg-white/70 backdrop-blur-sm p-6 sm:p-8 text-white shadow-sm">
+            <!-- 1 -->
+            <h2 class="text-2xl font-semibold mt-4">1. Administrator danych</h2>
+            <p class="mt-2 text-white">
+              Administratorem Twoich danych osobowych jest
+              <strong>Słowa i Algorytmy</strong>
+              z siedzibą przy ul. Marszałkowska 58, 00-545 Warszawa, Polska.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 2 -->
+            <h2 class="text-2xl font-semibold">2. Zakres przetwarzania</h2>
+            <ul
+              class="mt-2 list-disc list-inside text-white max-w-2xl mx-auto text-left">
+              <li>
+                <strong>Dane kontaktowe:</strong> imię i nazwisko, adres e‑mail,
+                treść wiadomości z formularza.
+              </li>
+              <li>
+                <strong>Dane techniczne/eksploatacyjne:</strong> adres IP,
+                identyfikatory przeglądarkowe, typ urządzenia, podstawowe dane
+                analityczne i bezpieczeństwa.
+              </li>
+              <li>
+                Nie gromadzimy numerów kart płatniczych ani danych dokumentów
+                tożsamości.
+              </li>
+            </ul>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 3 -->
+            <h2 class="text-2xl font-semibold">3. Cele i podstawy prawne</h2>
+            <ul
+              class="mt-2 list-disc list-inside text-white max-w-2xl mx-auto text-left">
+              <li>
+                <strong>Obsługa zapytań i korespondencji</strong> — art. 6 ust.
+                1 lit. b RODO lub lit. f.
+              </li>
+              <li>
+                <strong>Bezpieczeństwo i statystyka</strong> — art. 6 ust. 1
+                lit. f RODO.
+              </li>
+              <li>
+                <strong>Newsletter/komunikacja</strong> — art. 6 ust. 1 lit. a
+                RODO (zgoda, możliwa do wycofania).
+              </li>
+              <li>
+                <strong>Wymogi prawne</strong> — art. 6 ust. 1 lit. c RODO.
+              </li>
+            </ul>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 4 -->
+            <h2 class="text-2xl font-semibold">4. Okres przechowywania</h2>
+            <p class="mt-2 text-white">
+              Dane z korespondencji przechowujemy przez czas niezbędny do
+              obsługi sprawy oraz dodatkowo przez okres przedawnienia roszczeń.
+              Dane techniczne przechowujemy tak długo, jak to konieczne dla
+              bezpieczeństwa i statystyk.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 5 -->
+            <h2 class="text-2xl font-semibold">5. Odbiorcy danych</h2>
+            <p class="mt-2 text-white">
+              Możemy powierzać dane zaufanym dostawcom hostingu, poczty,
+              zabezpieczeń i analityki na podstawie umów powierzenia. Nie
+              sprzedajemy danych osobowych.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 6 -->
+            <h2 class="text-2xl font-semibold">6. Przekazywanie poza EOG</h2>
+            <p class="mt-2 text-white">
+              Jeżeli przekażemy dane poza EOG, zastosujemy odpowiednie
+              zabezpieczenia, m.in. standardowe klauzule umowne UE, i
+              poinformujemy o tym zgodnie z prawem.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 7 -->
+            <h2 class="text-2xl font-semibold">7. Pliki cookie i analityka</h2>
+            <p class="mt-2 text-white">
+              Stosujemy niezbędne pliki cookie do działania serwisu oraz
+              ograniczoną, zanonimizowaną analitykę. Ustawieniami cookie możesz
+              zarządzać w przeglądarce. Wyłączenie cookie technicznych może
+              utrudnić korzystanie z formularzy.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 8 -->
+            <h2 class="text-2xl font-semibold">8. Bezpieczeństwo</h2>
+            <ul
+              class="mt-2 list-disc list-inside text-white max-w-2xl mx-auto text-left">
+              <li>Szyfrowanie transmisji HTTPS (TLS).</li>
+              <li>Ograniczony i kontrolowany dostęp do danych.</li>
+              <li>Okresowy przegląd uprawnień i dzienników technicznych.</li>
+            </ul>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 9 -->
+            <h2 class="text-2xl font-semibold">9. Twoje prawa</h2>
+            <p class="mt-2 text-white">
+              Przysługują Ci prawa: dostępu do danych, sprostowania, usunięcia,
+              ograniczenia przetwarzania, przenoszenia danych, sprzeciwu wobec
+              przetwarzania na podstawie uzasadnionego interesu oraz prawo do
+              wycofania zgody. Masz też prawo złożyć skargę do Prezesa UODO.
+            </p>
+
+            <div
+              class="my-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+            <!-- 10 -->
+            <h2 class="text-2xl font-semibold">10. Zmiany dokumentu</h2>
+            <p class="mt-2 text-white">
+              Polityka może być aktualizowana wraz ze zmianami serwisu i
+              przepisów. Najświeższa wersja jest zawsze opublikowana na tej
+              stronie.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cookies Popup -->
+      <div
+        id="cookie-popup"
+        role="dialog"
+        aria-live="polite"
+        aria-label="Komunikat o plikach cookie"
+        class="fixed bottom-4 left-4 right-4 md:right-6 md:left-auto z-50 max-w-md bg-[#0f0f10]/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl ring-1 ring-white/10">
+        <!-- Header -->
+        <div class="flex items-start gap-3">
+          <!-- Icon -->
+          <div
+            class="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-xl p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <div
+              class="h-full w-full rounded-[10px] bg-[#0f0f10] grid place-items-center">
+              <svg
+                class="h-5 w-5 text-white/90"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true">
+                <path
+                  d="M12 2a5 5 0 005 5 5 5 0 005 5 8 8 0 11-8-10z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h3 class="text-base font-semibold text-white">Pliki cookie</h3>
+            <p class="mt-1 text-sm text-white/80">
+              Używamy plików cookie, aby poprawić komfort korzystania z serwisu.
+              Kontynuując, akceptujesz ich wykorzystanie. Więcej w
+              <a
+                href="#polityka"
+                class="underline decoration-white/30 hover:decoration-white"
+                >Polityce prywatności</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="mt-4 flex flex-wrap gap-2">
+          <!-- Accept (gradient border, fill on hover) -->
+          <button
+            id="accept-cookies"
+            class="group inline-flex items-center justify-center rounded-full p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <span
+              class="px-5 py-2.5 text-sm rounded-full text-white/90 bg-[#0f0f10] transition group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 group-hover:text-white group-hover:scale-[1.02]">
+              Akceptuję
+            </span>
+          </button>
+
+          <!-- Decline (neutral) -->
+          <button
+            id="decline-cookies"
+            class="inline-flex items-center justify-center px-5 py-2.5 text-sm rounded-full ring-1 ring-white/15 text-white/80 hover:ring-white/30 hover:text-white transition">
+            Odrzuć
+          </button>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const popup = document.getElementById("cookie-popup");
+          const acceptBtn = document.getElementById("accept-cookies");
+          const declineBtn = document.getElementById("decline-cookies");
+
+          if (
+            localStorage.getItem("cookiesAccepted") === "true" ||
+            localStorage.getItem("cookiesDeclined") === "true"
+          ) {
+            popup.style.display = "none";
+          }
+
+          acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesAccepted", "true");
+            popup.style.display = "none";
+          });
+
+          declineBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesDeclined", "true");
+            popup.style.display = "none";
+          });
+        });
+      </script>
+    </main>
+    <footer class="bg-[#0a0a0a] text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Лого -->
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="Logo" class="h-8" />
+          <span class="font-bold text-lg">Słowa i Algorytmy</span>
+        </div>
+
+        <!-- Навігація -->
+        <nav class="flex gap-6 text-sm text-gray-400 flex-wrap justify-center">
+          <a href="./index.html#o-nas" class="hover:text-white transition"
+            >O nas</a
+          >
+          <a href="./index.html#blog" class="hover:text-white transition"
+            >Blog</a
+          >
+          <a href="./index.html#kontakt" class="hover:text-white transition"
+            >Kontakt</a
+          >
+          <a href="./terms.html" class="hover:text-white transition"
+            >Warunki korzystania</a
+          >
+          <a href="./privacy.html" class="hover:text-white transition"
+            >Polityka prywatności</a
+          >
+        </nav>
+      </div>
+
+      <!-- Права -->
+      <div
+        class="mt-6 border-t border-gray-800 pt-4 text-center text-sm text-gray-500">
+        &copy; 2025 Słowa i Algorytmy – Wszystkie prawa zastrzeżone.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const HEADER_OFFSET = 0;
+
+        document.addEventListener("click", function (e) {
+          const trigger = e.target.closest("[data-scroll-to]");
+          if (!trigger) return;
+          e.preventDefault();
+
+          const id = trigger.dataset.scrollTo;
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          const y =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            HEADER_OFFSET;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
+</html>
