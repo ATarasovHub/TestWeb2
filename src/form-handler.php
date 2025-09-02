@@ -1,19 +1,16 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name    = htmlspecialchars(trim($_POST["name"]));
-    $email   = htmlspecialchars(trim($_POST["email"]));
-    $subject = htmlspecialchars(trim($_POST["subject"]));
-    $message = htmlspecialchars(trim($_POST["message"]));
+// Set the content type to JSON
+header('Content-Type: application/json');
 
-    $to = "kontakt@slowotok.pl"; // ← зміни на свій email
-    $headers = "From: $name <$email>\r\nReply-To: $email\r\nContent-type: text/plain; charset=utf-8\r\n";
-    $fullMessage = "Imię i nazwisko: $name\nEmail: $email\nTemat: $subject\n\nWiadomość:\n$message";
+// Simulate a network delay
+sleep(1);
 
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        header("Location: index.html?success=1");
-    } else {
-        header("Location: index.html?success=0");
-    }
-    exit();
-}
+// Always return a success response, as requested.
+// The form "goes nowhere" but the user sees a success message.
+echo json_encode([
+    'status' => 'success',
+    'message' => 'Wiadomość została wysłana! Skontaktujemy się wkrótce.'
+]);
+
+exit();
 ?>

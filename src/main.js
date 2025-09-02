@@ -39,7 +39,70 @@ document.addEventListener('click', (e) => {
   });
 })();
 
-// Form tiny status
-const form = document.querySelector('form[action="./form-handler.php"]');
-const statusEl = document.getElementById('form-status');
-form?.addEventListener('submit', () => { if (statusEl) statusEl.textContent = 'Wysyłanie…'; });
+// Contact Form submission
+(function contactForm() {
+  const form = document.querySelector('form[action="./form-handler.php"]');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.reset();
+  });
+})();
+
+// Sliders
+(function sliders() {
+  new Swiper('#team-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '#team-slider .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+
+  new Swiper('#services-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '#services-slider .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+
+  new Swiper('#blog-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '#blog-slider .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+})();

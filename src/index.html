@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Słowa i Algorytmy — Konsultacje AI dla firm</title>
+    <title>AI Nexus — Innowacyjne Rozwiązania AI dla Biznesu</title>
 
     <!-- Favicon (вариант 1: локальный файл) -->
-    <link rel="icon" type="image/png" href="/src/images/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="./images/logo.svg" />
     <!-- Favicon (вариант 2: встроенный, на случай если нет images/logo.png) -->
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="100%" height="100%" fill="black"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="140" fill="white">AI</text></svg>' />
 
-    <meta name="description" content="Konsultacje AI: audyt procesów, dobór narzędzi, pilotaż i szkolenia. Bez obietnic szybkich wyników — tylko rzetelne wdrożenia." />
+    <meta name="description" content="AI Nexus oferuje zaawansowane konsultacje w zakresie sztucznej inteligencji. Audytujemy procesy, dobieramy najnowsze narzędzia AI, prowadzimy wdrożenia pilotażowe oraz kompleksowe szkolenia dla zespołów." />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
 
   <body>
     <header>
       <div class="container">
         <a href="#start" id="logo">
-          <img src="./images/logo.png" alt="Logo" />
-          <span>Słowa i Algorytmy</span>
+          <img src="./images/logo.svg" alt="Logo AI Nexus" />
+          <span>AI Nexus</span>
         </a>
         <nav id="desktop-nav">
           <a href="#o-nas">O nas</a>
@@ -51,10 +52,9 @@
       <section id="hero">
         <div class="container">
             <span>Doradztwo • Wdrożenia • Szkolenia</span>
-            <h1>Praktyczne wdrożenia <span>AI w Twojej firmie</span></h1>
+            <h1>Transformacja Biznesu z <span>AI Nexus</span></h1>
             <p>
-              Pomagamy uporządkować obszary zastosowań, dobrać narzędzia i bezpiecznie przeprowadzić pilotaż.
-              Bez obietnic „szybkich wyników” — rzetelna analiza, cele jakościowe i szkolenia.
+              W AI Nexus specjalizujemy się w identyfikacji i wdrażaniu rozwiązań opartych na sztucznej inteligencji, które rewolucjonizują procesy biznesowe. Nasze podejście to synergia zaawansowanej technologii i dogłębnego zrozumienia Twoich celów. Zapewniamy mierzalne rezultaty, od optymalizacji po innowacje produktowe, prowadząc Cię przez każdy etap cyfrowej transformacji.
             </p>
             <div class="cta-buttons">
               <a href="#kontakt" class="cta-primary">Umów rozmowę</a>
@@ -81,58 +81,168 @@
         </div>
       </section>
 
+      <section id="team">
+        <div class="container">
+          <h2>Poznaj Nasz Zespół</h2>
+          <p class="lead" style="text-align:center; max-width: 80ch; margin: 0 auto 2rem auto;">Nasz sukces to zasługa zespołu ekspertów, którzy łączą pasję do technologii z wieloletnim doświadczeniem w branży. Poznaj liderów, którzy stoją za innowacyjnymi rozwiązaniami AI Nexus.</p>
+          <!-- Slider main container -->
+          <div class="swiper" id="team-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="team-card">
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="Jan Kowalski">
+                  <h3>Jan Kowalski</h3>
+                  <p>CEO & Główny Architekt AI</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team-card">
+                  <img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=600&auto=format&fit=crop" alt="Anna Nowak">
+                  <h3>Anna Nowak</h3>
+                  <p>Dyrektor ds. Operacyjnych</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team-card">
+                  <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=600&auto=format&fit=crop" alt="Piotr Wiśniewski">
+                  <h3>Piotr Wiśniewski</h3>
+                  <p>Kierownik ds. Wdrożeń</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team-card">
+                  <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=600&auto=format&fit=crop" alt="Katarzyna Wójcik">
+                  <h3>Katarzyna Wójcik</h3>
+                  <p>Specjalistka ds. Danych</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="team-card">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Tomasz Zieliński">
+                  <h3>Tomasz Zieliński</h3>
+                  <p>Starszy Inżynier AI</p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section id="uslugi">
         <div class="container">
-          <h2>Zakres usług</h2>
-          <p>Bez „magii” — plan, odpowiedzialność i klarowna komunikacja.</p>
-          <div class="cards-grid">
-            <article>
-              <img src="https://images.unsplash.com/photo-1516116216624-53e697314E73?q=80&w=600&auto=format&fit=crop" alt="Audyt procesów AI">
-              <h3>Audyt procesów</h3>
-              <p>Mapa zadań, ryzyka i możliwości wsparcia AI.</p>
-            </article>
-            <article>
-              <img src="https://images.unsplash.com/photo-1620712943543-2858200f7426?q=80&w=600&auto=format&fit=crop" alt="Dobór narzędzi AI">
-              <h3>Dobór narzędzi</h3>
-              <p>Kryteria jakości, prywatność, zgodność z politykami.</p>
-            </article>
-            <article>
-              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=600&auto=format&fit=crop" alt="Pilotaż i szkolenia AI">
-              <h3>Pilotaż i szkolenia</h3>
-              <p>Mała skala, jasne wskaźniki jakości, szkolenia użytkowników.</p>
-            </article>
+          <h2>Nasze Usługi</h2>
+          <p class="lead" style="text-align:center; max-width: 80ch; margin: 0 auto 2rem auto;">Oferujemy szeroki wachlarz usług, od strategicznego doradztwa po pełne wdrożenia. Nasze rozwiązania są projektowane na miarę, aby sprostać unikalnym wyzwaniom i możliwościom Twojej organizacji.</p>
+          <div class="swiper" id="services-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?fm=jpg&q=60&w=600&auto=format&fit=crop" alt="Audyt procesów AI">
+                  <h3>Audyt Procesów Biznesowych</h3>
+                  <p>Identyfikujemy i mapujemy procesy w Twojej firmie, które mają największy potencjał do automatyzacji i optymalizacji przy użyciu AI.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=60&w=600&auto=format&fit=crop" alt="Dobór narzędzi AI">
+                  <h3>Strategiczny Dobór Narzędzi AI</h3>
+                  <p>Pomagamy wybrać odpowiednie technologie i platformy AI, które najlepiej odpowiadają Twoim potrzebom, budżetowi i celom strategicznym.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=60&w=600&auto=format&fit=crop" alt="Pilotaż i szkolenia AI">
+                  <h3>Wdrożenia Pilotażowe i MVP</h3>
+                  <p>Realizujemy szybkie wdrożenia pilotażowe (Proof of Concept), aby zweryfikować koncepcję i pokazać wartość dodaną AI w praktyce.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=600&auto=format&fit=crop" alt="Szkolenia Zespołów">
+                  <h3>Szkolenia Zespołów</h3>
+                  <p>Organizujemy dedykowane warsztaty i szkolenia, które podnoszą kompetencje Twoich pracowników w zakresie efektywnego korzystania z narzędzi AI.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1611162617213-6d221bde38ac?q=80&w=600&auto=format&fit=crop" alt="Automatyzacja Marketingu">
+                  <h3>Automatyzacja Marketingu i Sprzedaży</h3>
+                  <p>Wdrażamy inteligentne systemy do automatyzacji kampanii marketingowych, personalizacji ofert i prognozowania sprzedaży.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=600&auto=format&fit=crop" alt="Inteligentna Analiza Danych">
+                  <h3>Inteligentna Analiza Danych</h3>
+                  <p>Przekształcamy surowe dane w cenne insighty biznesowe za pomocą zaawansowanych modeli analitycznych i wizualizacji.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1678483783335-94340d07575d?q=80&w=600&auto=format&fit=crop" alt="Chatboty i Asystenci Głosowi">
+                  <h3>Chatboty i Asystenci Głosowi</h3>
+                  <p>Projektujemy i wdrażamy inteligentnych asystentów, które automatyzują obsługę klienta i usprawniają komunikację wewnętrzną.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1507146153580-69a196d2ba21?q=80&w=600&auto=format&fit=crop" alt="Optymalizacja Logistyki">
+                  <h3>Optymalizacja Łańcucha Dostaw</h3>
+                  <p>Wykorzystujemy AI do prognozowania popytu, optymalizacji tras i zarządzania zapasami, co prowadzi do znacznych oszczędności.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Wsparcie Decyzyjne">
+                  <h3>Systemy Wsparcia Decyzyjnego</h3>
+                  <p>Tworzymy narzędzia, które na podstawie danych w czasie rzeczywistym dostarczają rekomendacji wspierających kluczowe decyzje zarządcze.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1684369176324-71d5a7664f2a?q=80&w=600&auto=format&fit=crop" alt="Bezpieczeństwo AI">
+                  <h3>Bezpieczeństwo i Etyka AI</h3>
+                  <p>Zapewniamy, że wdrożone rozwiązania są nie tylko efektywne, ale także bezpieczne, transparentne i zgodne z zasadami etyki AI.</p>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
 
       <section id="proces">
         <div class="container">
-          <h2>Jak pracujemy</h2>
+          <h2>Nasz Proces Wdrożeniowy</h2>
+          <p class="lead" style="text-align:center; max-width: 80ch; margin: 0 auto 2rem auto;">Stosujemy sprawdzoną, pięcioetapową metodykę, która gwarantuje transparentność, bezpieczeństwo i maksymalizację zwrotu z inwestycji w AI. Każdy krok jest starannie planowany i realizowany w ścisłej współpracy z Twoim zespołem, aby zapewnić, że finalne rozwiązanie idealnie odpowiada na potrzeby organizacji.</p>
           <div class="process-grid">
             <div class="process-step">
               <span>Krok 1</span>
-              <h3>Diagnoza</h3>
-              <p>Wywiady, analiza zadań i danych.</p>
+              <h3>Diagnoza i Analiza Potrzeb</h3>
+              <p>Zaczynamy od serii warsztatów i wywiadów z kluczowymi interesariuszami, aby dogłębnie zrozumieć Twoje procesy, wyzwania i cele. Analizujemy istniejące dane i infrastrukturę w poszukiwaniu największego potencjału dla automatyzacji i optymalizacji.</p>
             </div>
             <div class="process-step">
               <span>Krok 2</span>
-              <h3>Koncepcja</h3>
-              <p>Scenariusze użycia i kryteria jakości.</p>
+              <h3>Projektowanie Rozwiązania i Roadmapa</h3>
+              <p>Na podstawie zebranych informacji tworzymy szczegółową koncepcję rozwiązania, w tym architekturę systemu i zdefiniowane scenariusze użycia. Opracowujemy wspólnie roadmapę wdrożeniową z jasno określonymi kamieniami milowymi i kryteriami sukcesu.</p>
             </div>
             <div class="process-step">
               <span>Krok 3</span>
-              <h3>Dobór narzędzi</h3>
-              <p>Zgodność z RODO i bezpieczeństwo.</p>
+              <h3>Dobór i Konfiguracja Narzędzi</h3>
+              <p>Dobieramy najbardziej efektywne narzędzia AI, kładąc nacisk na bezpieczeństwo, skalowalność i zgodność z RODO. Integrujemy je z Twoim obecnym ekosystemem technologicznym, minimalizując zakłócenia w bieżącej pracy.</p>
             </div>
             <div class="process-step">
               <span>Krok 4</span>
-              <h3>Pilotaż</h3>
-              <p>Iteracje, feedback użytkowników.</p>
+              <h3>Wdrożenie Pilotażowe i Iteracje</h3>
+              <p>Uruchamiamy rozwiązanie na małą, kontrolowaną skalę (pilotaż), aby przetestować jego działanie w realnych warunkach. Zbieramy feedback od użytkowników i iteracyjnie doskonalimy model, aż osiągnie on zakładane wskaźniki jakościowe.</p>
             </div>
             <div class="process-step">
               <span>Krok 5</span>
-              <h3>Wdrożenie</h3>
-              <p>Procedury, szkolenia, utrzymanie.</p>
+              <h3>Pełne Wdrożenie i Szkolenia</h3>
+              <p>Po sukcesie pilotażu przeprowadzamy pełne wdrożenie w całej organizacji. Kluczowym elementem tego etapu jest kompleksowe szkolenie Twojego zespołu, tworzenie dokumentacji i ustanowienie procedur utrzymania systemu, aby zapewnić jego długofalową wartość.</p>
             </div>
           </div>
         </div>
@@ -140,23 +250,54 @@
 
       <section id="blog">
         <div class="container">
-          <h2>Blog (makiety)</h2>
-          <div class="cards-grid">
-            <article>
-              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop" alt="Planowanie pilotażu AI">
-              <h3>Jak planować pilotaż AI</h3>
-              <p>Minimalny zakres, metryki jakości, feedback.</p>
-            </article>
-            <article>
-              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop" alt="Bezpieczeństwo i RODO w AI">
-              <h3>Bezpieczeństwo i RODO</h3>
-              <p>Uprawnienia, retencja, minimalizacja danych.</p>
-            </article>
-            <article>
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop" alt="Szkolenia zespołu z AI">
-              <h3>Szkolenia zespołu</h3>
-              <p>Nawyki pracy i standardy projektowe.</p>
-            </article>
+          <h2>Aktualności z Bloga</h2>
+          <p class="lead" style="text-align:center; max-width: 80ch; margin: 0 auto 2rem auto;">Dzielimy się naszą wiedzą i doświadczeniem. Na naszym blogu znajdziesz analizy trendów, studia przypadków oraz praktyczne porady dotyczące wdrażania i wykorzystania sztucznej inteligencji w biznesie.</p>
+          <div class="swiper" id="blog-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop" alt="Przyszłość AI w marketingu">
+                  <h3>Przyszłość AI w Marketingu: Top 5 Trendów na 2025 Rok</h3>
+                  <p>Odkryj, jak generatywna AI, hiperpersonalizacja i analityka predykcyjna zmieniają oblicze marketingu i jak Twoja firma może na tym skorzystać.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop" alt="RODO a AI">
+                  <h3>RODO a Sztuczna Inteligencja: Jak Zachować Zgodność?</h3>
+                  <p>Analizujemy kluczowe wyzwania związane z ochroną danych w projektach AI i podpowiadamy, jak budować zgodne z prawem, etyczne systemy.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop" alt="Szkolenia zespołu z AI">
+                  <h3>Jak Przygotować Zespół na Wdrożenie AI?</h3>
+                  <p>Wdrożenie AI to nie tylko technologia, ale przede wszystkim ludzie. Przeczytaj o kluczowych krokach w budowaniu kompetencji cyfrowych w zespole.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600&auto=format&fit=crop" alt="AI w obsłudze klienta">
+                  <h3>Case Study: Jak Chatbot Zwiększył Naszą Konwersję o 40%</h3>
+                  <p>Przedstawiamy studium przypadku wdrożenia inteligentnego asystenta na stronie naszego klienta z branży e-commerce i analizujemy czynniki sukcesu.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1620712943543-2858200f7426?q=80&w=600&auto=format&fit=crop" alt="Wybór platformy AI">
+                  <h3>Open Source vs. Komercyjne Platformy AI: Co Wybrać?</h3>
+                  <p>Porównujemy zalety i wady obu podejść, pomagając Ci podjąć świadomą decyzję o wyborze odpowiedniej platformy dla Twojego projektu.</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article>
+                  <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=600&auto=format&fit=crop" alt="Etyka AI">
+                  <h3>Etyczne Dylematy AI: Gdzie Leży Granica?</h3>
+                  <p>Zapraszamy do dyskusji na temat odpowiedzialności, transparentności i potencjalnych uprzedzeń w algorytmach sztucznej inteligencji.</p>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -184,7 +325,35 @@
                 <span>Integracje z innymi narzędziami?</span>
                 <svg viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </summary>
-              <p>Dobieramy rozwiązania pod potrzeby i bezpieczeństwo.</p>
+              <p>Tak, specjalizujemy się w integracji naszych rozwiązań AI z istniejącymi systemami CRM, ERP, a także z niestandardowym oprogramowaniem. Naszym celem jest stworzenie spójnego ekosystemu, który maksymalizuje efektywność.</p>
+            </details>
+            <details>
+              <summary>
+                <span>Jak długo trwa typowy proces wdrożenia?</span>
+                <svg viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <p>Czas wdrożenia zależy od złożoności projektu. Prosty pilotaż może trwać od 4 do 6 tygodni. Pełne, skalowalne wdrożenie w całej organizacji to zazwyczaj proces trwający od 3 do 6 miesięcy. Zawsze dostarczamy szczegółowy harmonogram na początku współpracy.</p>
+            </details>
+            <details>
+              <summary>
+                <span>Czy oferujecie wsparcie po wdrożeniu?</span>
+                <svg viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <p>Oczywiście. Oferujemy kompleksowe pakiety wsparcia technicznego i utrzymania, aby zapewnić ciągłość działania i optymalizację wdrożonych systemów AI. Nasz zespół jest dostępny, aby pomagać w rozwiązywaniu problemów i wprowadzać ulepszenia.</p>
+            </details>
+            <details>
+              <summary>
+                <span>Jakie branże obsługujecie?</span>
+                <svg viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <p>Mamy doświadczenie w pracy z klientami z różnych sektorów, w tym e-commerce, finanse, produkcja, logistyka i opieka zdrowotna. Nasze rozwiązania są elastyczne i mogą być dostosowane do specyficznych wymagań każdej branży.</p>
+            </details>
+            <details>
+              <summary>
+                <span>Czy moje dane są bezpieczne?</span>
+                <svg viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <p>Bezpieczeństwo i poufność danych to nasz najwyższy priorytet. Stosujemy najnowocześniejsze metody szyfrowania, rygorystyczne polityki dostępu i regularne audyty bezpieczeństwa. Wszystkie nasze działania są w pełni zgodne z RODO.</p>
             </details>
           </div>
         </div>
@@ -218,6 +387,10 @@
               <input name="email" type="email" required placeholder="adres@firma.pl" />
             </label>
             <label>
+              <span>Telefon (opcjonalnie)</span>
+              <input name="phone" type="tel" placeholder="+48 123 456 789" />
+            </label>
+            <label>
               <span>Wiadomość</span>
               <textarea name="message" rows="5" required placeholder="Opisz krótko wyzwanie / proces"></textarea>
             </label>
@@ -235,8 +408,8 @@
     <footer>
       <div class="container">
         <div id="footer-logo">
-          <img src="./images/logo.png" alt="Logo" />
-          <span>Słowa i Algorytmy</span>
+          <img src="./images/logo.svg" alt="Logo AI Nexus" />
+          <span>AI Nexus</span>
         </div>
         <nav>
           <a href="#o-nas">O nas</a>
@@ -247,7 +420,7 @@
         </nav>
       </div>
       <div class="copyright">
-        &copy; 2025 Słowa i Algorytmy — Wszystkie prawa zastrzeżone.
+        &copy; 2025 AI Nexus — Wszystkie prawa zastrzeżone.
       </div>
     </footer>
 
@@ -272,6 +445,7 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
