@@ -68,11 +68,11 @@ img {
 -------------------------------------------------- */
 .container {
   width: 100%;
-  max-width: 1140px; /* Standard container width */
+  max-width: 1400px; /* Standard container width */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 section {
@@ -110,7 +110,7 @@ section + section {
   color: #ccc;
 }
 #hero h1 {
-  font-size: 4.25rem;
+  font-size: 3.5rem;
 }
 #hero h1 span {
   /* This is for the gradient text, which requires a background clip. */
@@ -122,12 +122,11 @@ section + section {
   padding: 0;
   margin: 0;
   display: inline; /* Reset from span default */
-  font-size: 0.8em;
 }
 #hero p {
-  max-width: 60ch;
   margin: 1.5rem auto;
   font-size: 1.125rem;
+  text-align: justify;
 }
 .cta-buttons {
   display: flex;
@@ -184,6 +183,12 @@ section + section {
   color: #3b82f6;
   flex-shrink: 0;
   margin-top: 0.2em;
+}
+#o-nas ul p {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 #o-nas .image-content img {
   border-radius: 1rem;
@@ -307,6 +312,7 @@ section + section {
 }
 #kontakt form input[type="text"],
 #kontakt form input[type="email"],
+#kontakt form input[type="tel"],
 #kontakt form textarea {
   width: 100%;
   background-color: #222;
@@ -523,7 +529,6 @@ footer nav a {
 
 @media (min-width: 1024px) { /* Desktop and up */
   h1 { font-size: 4rem; }
-  #hero h1 { font-size: 5rem; }
 
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -587,6 +592,20 @@ footer nav a {
   justify-content: center;
   align-items: center;
 }
+#team-slider .swiper-pagination {
+  position: relative;
+  margin-top: 1.5rem;
+}
+#services-slider .swiper-pagination,
+#blog-slider .swiper-pagination {
+  position: relative;
+  margin-top: 2.5rem;
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
 .swiper-pagination-bullet-active {
   background-color: #60a5fa;
 }
@@ -601,7 +620,7 @@ footer nav a {
   padding: 1.5rem;
   text-align: center;
   width: 100%;
-  max-width: 280px;
+  max-width: 350px;
 }
 .team-card img {
   width: 120px;
@@ -620,3 +639,115 @@ footer nav a {
   color: #888;
   margin-bottom: 0;
 }
+.team-card p.description {
+  font-size: 0.8rem;
+  text-align: left;
+  margin-top: 0.75rem;
+  color: #ccc;
+}
+
+/* 9. Cookie Popup
+-------------------------------------------------- */
+#cookie-popup {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+}
+.popup-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.popup-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+.popup-text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.popup-text p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.popup-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.popup-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.popup-buttons button:hover {
+  background-color: #444;
+}
+.popup-buttons button#accept-cookies {
+  background: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  border-color: transparent;
+}
+.popup-buttons button#accept-cookies:hover {
+  opacity: 0.9;
+}
+
+/* Blog: карточки в стиле персонала (цвет/рамка), но под длинный текст */
+#blog .blog-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  width: 100%;
+  max-width: 700px;          /* шире для читабельности */
+}
+
+#blog .blog-card h3 {
+  font-size: 1.25rem;        /* как в .team-card */
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  color: #fff;
+}
+
+#blog .blog-card p {
+  font-size: 0.95rem;        /* чуть крупнее базового */
+  line-height: 1.75;
+  color: #ccc;
+  margin-bottom: 0.9rem;
+}
+
+/* Пагинация Swiper: белые пули, активная синяя (единый стиль) */
+#blog-slider .swiper-pagination {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+#blog-slider .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#blog-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #60a5fa;
+  transform: scale(1.1);
+}
+#blog-slider .swiper-wrapper { align-items: stretch; }
+#blog-slider .swiper-slide { display: flex; }
+#blog .blog-card { display: flex; flex-direction: column; height: 100%; }
+
+

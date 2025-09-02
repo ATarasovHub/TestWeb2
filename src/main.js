@@ -60,6 +60,10 @@ document.addEventListener('click', (e) => {
       el: '#team-slider .swiper-pagination',
       clickable: true,
     },
+    scrollbar: {
+      el: '#team-slider .swiper-scrollbar',
+      hide: false,
+    },
     breakpoints: {
       640: {
         slidesPerView: 2,
